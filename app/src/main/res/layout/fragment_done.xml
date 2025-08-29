@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DoneFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        style="?attr/materialCardViewFilledStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:minHeight="194dp"
+                android:maxHeight="300dp"
+                app:srcCompat="@null"
+                android:scaleType="centerCrop"
+                android:importantForAccessibility="no" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_like"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="-32dp"
+                android:backgroundTint="@color/md_theme_surfaceContainer"
+                android:contentDescription="@string/button_like_description"
+                app:icon="@drawable/favorite"
+                app:iconTint="@color/md_theme_onSurfaceVariant_mediumContrast" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="24dp"
+                android:text="@string/done_text"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_settings"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/md_theme_surfaceBright"
+        android:contentDescription="@string/button_settings_description"
+        app:iconSize="32dp"
+        app:icon="@drawable/settings"
+        app:iconTint="@color/md_theme_onSurfaceVariant_mediumContrast" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_gallery"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/button_settings"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/md_theme_surfaceBright"
+        android:contentDescription="@string/button_gallery_description"
+        app:iconSize="32dp"
+        app:icon="@drawable/gallery"
+        app:iconTint="@color/md_theme_onSurfaceVariant_mediumContrast" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

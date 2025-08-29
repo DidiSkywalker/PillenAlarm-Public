@@ -1,0 +1,10 @@
+<resources>
+    <attr name="colorDarkBrown" format="color" />
+    <attr name="colorOnDarkBrown" format="color" />
+    <attr name="colorDarkBrownContainer" format="color" />
+    <attr name="colorOnDarkBrownContainer" format="color" />
+    <attr name="colorBrown" format="color" />
+    <attr name="colorOnBrown" format="color" />
+    <attr name="colorBrownContainer" format="color" />
+    <attr name="colorOnBrownContainer" format="color" />
+</resources>

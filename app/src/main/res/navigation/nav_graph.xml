@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/doneFragment"
+        android:name="me.corv.pillenalarm.fragments.DoneFragment"
+        android:label="@null"
+        tools:layout="@layout/fragment_done">
+        <action
+            android:id="@+id/action_doneFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_doneFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_doneFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="me.corv.pillenalarm.fragments.InputFragment"
+        android:label="fragment_input"
+        tools:layout="@layout/fragment_input" >
+        <action
+            android:id="@+id/action_inputFragment_to_doneFragment"
+            app:destination="@id/doneFragment"/>
+        <action
+            android:id="@+id/action_inputFragment_to_timerFragment"
+            app:destination="@id/timerFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="me.corv.pillenalarm.fragments.LoadingFragment"
+        android:label="LoadingFragment">
+        <action
+            android:id="@+id/action_loadingFragment_to_doneFragment"
+            app:destination="@id/doneFragment"/>
+        <action
+            android:id="@+id/action_loadingFragment_to_inputFragment"
+            app:destination="@id/inputFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="me.corv.pillenalarm.fragments.TimerFragment"
+        android:label="TimerFragment" >
+        <action
+            android:id="@+id/action_timerFragment_to_inputFragment"
+            app:destination="@id/inputFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/slide_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="me.corv.pillenalarm.fragments.GalleryFragment"
+        android:label="@string/gallery"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_doneFragment"
+            app:destination="@id/doneFragment" />
+        <action
+            android:id="@+id/action_galleryFragment_to_gifFragment"
+            app:destination="@id/gifFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="me.corv.pillenalarm.fragments.SettingsFragment"
+        android:label="@string/settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_doneFragment"
+            app:destination="@id/doneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gifFragment"
+        android:name="me.corv.pillenalarm.fragments.GifFragment">
+        <action
+            android:id="@+id/action_gifFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/slide_down" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>

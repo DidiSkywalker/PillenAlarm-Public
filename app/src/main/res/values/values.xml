@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TimerButton.Size">90dp</dimen>
+    <dimen name="TimerButton.Margin">12dp</dimen>
+    <dimen name="TimerButton.TextSize">30sp</dimen>
+</resources>
